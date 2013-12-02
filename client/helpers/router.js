@@ -10,6 +10,29 @@ Router.configure({
     notFoundTemplate: 'notFound'
 });
 
-Router.route('home', {
-    path: '/'
+Router.map(function() {
+
+    //routes to pages
+
+    this.route('home', {
+        path: '/'
+    });
+
+
+    //routes to stories
+
+    this.route('stories', {
+        path: '/stories',
+
+        waitOn: function() {
+            return Meteor.subscribe('allItems');
+        },
+        data: function() {
+            return {
+                stories: Stories.find()
+            };
+        }
+    });
+
+
 });

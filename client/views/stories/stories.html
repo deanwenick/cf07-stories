@@ -1,0 +1,12 @@
+<template name="stories">
+    <h2>These are the current stories</h2>
+    <ul>
+        {{#each stories}}
+            <li>
+                <a href="{{pathFor 'story'}}">
+                    {{title}}
+                </a>
+            </li>
+        {{/each}}
+    </ul>
+</template>
