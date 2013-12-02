@@ -3,8 +3,13 @@
 
     {{#with story}}
         <div class="story">
-            <h3>{{title}}</h3>
-            <h4>{{_id}}</h4>
+            <h3>{{photographer}}</h3>
+                <ul>
+                {{#each photos}}
+                    <li><img height=100 width=150 src="/pics/{{.}}"></li>
+                {{/each}}
+            </ul>
+            <button type=button id=seeShow data-id={{_id}}>See Slide Show</button>'
         </div>
 
     {{/with}}

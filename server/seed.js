@@ -7,21 +7,27 @@ seed data if database is empty
 if (Stories.find().count() === 0) {
 
     Stories.insert({
-        id: "001",
-        title: "First Story",
-        body: "bodyuno"
+        photographer: "Dean W.",
+        editor: "Dean",
+        votes: 0,
+        photos: ["wenick_20131110_171.jpg", "wenick_20131110_182.jpg", "wenick_20131110_186.jpg", "wenick_20131110_190.jpg", "wenick_20131110_205.jpg"],
+        comments: "D2BS est 2013"
     });
 
     Stories.insert({
-        id: "002",
-        title: "Second Story",
-        body: "body dos"
+        photographer: "Dean",
+        editor: "Dean",
+        votes: 1,
+        photos: ["wenick_20130409_149.jpg", "wenick_20130409_158.jpg", "wenick_20130409_203.jpg", "wenick_20130409_212.jpg", "wenick_20130409_236.jpg"],
+        comments: "Bill's Party"
     });
 
     Stories.insert({
-        id: "003",
-        title: "Third Story",
-        body: "body 3"
+        photographer: "Dean Wenick",
+        editor: "Dean",
+        votes: 1,
+        photos: ["wenick_20130714_083.jpg", "wenick_20130714_100.jpg", "wenick_20130714_104.jpg", "wenick_20130714_108.jpg", "wenick_20130714_171.jpg"],
+        comments: "See Jane Run"
     });
 
 }
