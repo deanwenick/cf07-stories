@@ -7,15 +7,21 @@ seed data if database is empty
 if (Stories.find().count() === 0) {
 
     Stories.insert({
-        title: "First Story"
+        id: "001",
+        title: "First Story",
+        body: "bodyuno"
     });
 
     Stories.insert({
-        title: "Second Story"
+        id: "002",
+        title: "Second Story",
+        body: "body dos"
     });
 
     Stories.insert({
-        title: "Third Story"
+        id: "003",
+        title: "Third Story",
+        body: "body 3"
     });
 
 }

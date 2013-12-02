@@ -10,6 +10,7 @@ Router.configure({
     notFoundTemplate: 'notFound'
 });
 
+
 Router.map(function() {
 
     //routes to pages
@@ -22,14 +23,27 @@ Router.map(function() {
     //routes to stories
 
     this.route('stories', {
-        path: '/stories',
-
         waitOn: function() {
-            return Meteor.subscribe('allItems');
+            return Meteor.subscribe('allStories');
         },
+
         data: function() {
             return {
                 stories: Stories.find()
+            };
+        }
+    });
+
+    this.route('story', {
+        
+        path: '/stories/:_id',
+
+        waitOn: function() {
+            return Meteor.subscribe('singleStory', this.params._id);
+        },
+        data: function() {
+            return {
+                story: Stories.findOne(this.params._id)
             };
         }
     });
