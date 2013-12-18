@@ -2,14 +2,17 @@
     <a href="/stories">&larr; Back</a>
 
     {{#with story}}
-        <div class="story">
+        <div data-photographer="{{photographer}}" class="story">
             <h3>{{photographer}}</h3>
-                <ul>
+            <ul>
                 {{#each photos}}
                     <li><img height=100 width=150 src="/pics/{{.}}"></li>
                 {{/each}}
             </ul>
-            <button type=button id=seeShow data-id={{_id}}>See Slide Show</button>'
+            <button class='btn' type='button' id='seeShow' data-id="{{_id}}">See Slide Show</button>
+            <button class='btn' type='button' id='vote'>Vote</button>
+            <button class='btn' type='button' id='createStory'>Create Story</button>
+            <p>Votes: <span>{{votes}}</span></p>
         </div>
 
     {{/with}}

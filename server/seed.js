@@ -7,7 +7,7 @@ seed data if database is empty
 if (Stories.find().count() === 0) {
 
     Stories.insert({
-        photographer: "Dean W.",
+        photographer: "ulio",
         editor: "Dean",
         votes: 0,
         photos: ["wenick_20131110_171.jpg", "wenick_20131110_182.jpg", "wenick_20131110_186.jpg", "wenick_20131110_190.jpg", "wenick_20131110_205.jpg"],

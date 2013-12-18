@@ -1,7 +1,4 @@
-if (Meteor.isClient) {
-  $('document').ready(function(){$('body').css({"background-color": "#dddddd"});
-  });
-}
+if (Meteor.isClient) {}
 
 if (Meteor.isServer) {
   Meteor.startup(function () {

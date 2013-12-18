@@ -41,12 +41,11 @@ Router.map(function() {
         waitOn: function() {
             return Meteor.subscribe('singleStory', this.params._id);
         },
+        
         data: function() {
             return {
                 story: Stories.findOne(this.params._id)
             };
         }
     });
-
-
 });
