@@ -8,7 +8,7 @@
             <h4>Photographer: {{photographer}} <small>Editor: {{editor}}</h4>
             <ul id="storyView" class="list-inline list-unstyled">
                 {{#each photos}}
-                    <li><img height=100 width=150 src="/pics/{{.}}"></li>
+                    <li><img height=100 width=150 src="{{.}}"></li>
                 {{/each}}
             </ul>
             <button class='btn btn-default' type='button' id='seeShow' data-id="{{_id}}">See Slide Show</button>

@@ -14,8 +14,12 @@ Template.story.rendered = function () {
 
 Template.story.events ({
     'click #seeShow' : function() {
-        var photos = this.photos;
-        photos = _.map(photos,function(url){return "/pics/"+url;});
+        var list = $('#storyView li img');
+
+        var photos = _.map(list, function(pic){
+            rawURL = $(pic).attr('src');
+        });
+
         $.iLightBox(
 
             photos,
@@ -48,13 +52,19 @@ Template.story.events ({
     },
 
     'click #createStory' : function() {
+
+        var list = $('#storyView li img');
+        var photos = _.map(list, function(pic){
+            return $(pic).attr('src');
+        });
+
         Stories.insert(
                 {
-                photographer: "albert",
-                editor: "test Editor",
+                photographer: this.photographer,
+                editor: Meteor.user().username,
                 votes: 1,
-                photos: ["wenick_20130409_149.jpg", "wenick_20130409_158.jpg", "wenick_20130409_203.jpg", "wenick_20130409_212.jpg", "wenick_20130409_236.jpg"],
-                comments: "Bill's Party"
+                photos: photos,
+                storyName: this.storyName + 'dod'
                 },
                 function(err, result) {
                     if(err) {
