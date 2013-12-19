@@ -1,3 +1,0 @@
-/*
-create new class by extending Meteor Collection class
-*/
