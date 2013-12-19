@@ -1,11 +1,18 @@
 /*
 code for the story template
 */
-Template.story.votes = function() {
-    return Session.get('votes') || this.votes;
+
+Template.story.rendered = function () {
+    $('#storyView').sortable();
+
+    if(Meteor.user()){
+        $( "#storyView" ).on( "sort", function( event, ui ) {
+            $('#createStory').removeClass('disabled');
+        } );
+    }
 };
 
-Template.story.events({
+Template.story.events ({
     'click #seeShow' : function() {
         var photos = this.photos;
         photos = _.map(photos,function(url){return "/pics/"+url;});
@@ -34,13 +41,10 @@ Template.story.events({
         });
     },
 
-    'click #vote' : function() {
-        //alert($('h3').html());
-        //alert(this.photographer);
-        this.votes ++;
-        //$('p span').html(this.votes);
-        console.log("voting");
-        Session.set(this.votes);
+    'click #vote' : function(evt, templ) {
+        Stories.update(this._id, {$inc: {votes: 1}});
+        var u = Meteor.user().username;
+        alert(u);
     },
 
     'click #createStory' : function() {
@@ -62,5 +66,13 @@ Template.story.events({
             );
 
     }
-});
+});// /events
+
+Template.story.isUser = function() {
+    return Meteor.userId();
+};
+
+Template.story.getUser = function() {
+    return Meteor.users.findOne(this).username;
+};
 

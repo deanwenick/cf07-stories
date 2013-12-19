@@ -3,7 +3,8 @@
   "dependencies": {
     "basePackages": {
       "iron-router": {},
-      "bootstrap-3": {}
+      "bootstrap-3": {},
+      "jqueryui": {}
     },
     "packages": {
       "iron-router": {
@@ -15,6 +16,16 @@
         "git": "https://github.com/mangasocial/meteor-bootstrap-3.git",
         "tag": "v0.3.7",
         "commit": "5dd0d142c870647b910be80bc777b96f0dd45e5e"
+      },
+      "jqueryui": {
+        "git": "https://github.com/mizzao/meteor-jqueryui.git",
+        "tag": "v1.10.3r2",
+        "commit": "d54f75cfad37ff8ce6ef9ad49de55738ba921af7"
+      },
+      "build-fetcher": {
+        "git": "https://github.com/mizzao/meteor-build-fetcher.git",
+        "tag": "v0.1.0",
+        "commit": "e3813b1fc7f5c576e8e1fa4c51ae6f4687780a35"
       }
     }
   }

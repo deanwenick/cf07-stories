@@ -1,20 +1,23 @@
 <template name="story">
+    <div class=container>
     <a href="/stories">&larr; Back</a>
-
+<div class="jumbotron">
     {{#with story}}
         <div data-photographer="{{photographer}}" class="story">
-            <h3>{{photographer}}</h3>
-            <ul>
+            <h3>{{storyName}}</h3>
+            <h4>Photographer: {{photographer}} <small>Editor: {{editor}}</h4>
+            <ul id="storyView" class="list-inline list-unstyled">
                 {{#each photos}}
                     <li><img height=100 width=150 src="/pics/{{.}}"></li>
                 {{/each}}
             </ul>
-            <button class='btn' type='button' id='seeShow' data-id="{{_id}}">See Slide Show</button>
-            <button class='btn' type='button' id='vote'>Vote</button>
-            <button class='btn' type='button' id='createStory'>Create Story</button>
+            <button class='btn btn-default' type='button' id='seeShow' data-id="{{_id}}">See Slide Show</button>
+            <button class='btn {{#unless isUser}}disabled{{/unless}} btn-default' type='button' id='vote'>Vote</button>
+            <button class='btn btn-default disabled' type='button' id='createStory'>Create Story</button>
             <p>Votes: <span>{{votes}}</span></p>
         </div>
 
     {{/with}}
-
+</div>
+</div>
 </template>
