@@ -4,10 +4,11 @@
     {{#each stories}}
     <div class="col-sm-6 col-md-4">
         <div class="thumbnail">
-            <img src="/pics/{{photos.[0]}}" alt="great image from a story">
+            <img src="{{photos.[0]}}" alt="great image from a story">
             <div class="caption">
                 <h3>{{storyName}}</h3>
                 <p>Photographer: {{photographer}}</p>
+                <p>Editor: {{editor}}</p>
                 <p><a href="/stories/{{_id}}" class="btn btn-primary" role="button">See the story</a> <span class="text-right">Votes: {{votes}}</span></p>
             </div>
         </div>

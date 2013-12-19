@@ -14,10 +14,10 @@ Template.story.rendered = function () {
 
 Template.story.events ({
     'click #seeShow' : function() {
-        var list = $('#storyView li img');
 
+        var list = $('#storyView li img');
         var photos = _.map(list, function(pic){
-            rawURL = $(pic).attr('src');
+           return $(pic).attr('src');
         });
 
         $.iLightBox(
@@ -48,7 +48,6 @@ Template.story.events ({
     'click #vote' : function(evt, templ) {
         Stories.update(this._id, {$inc: {votes: 1}});
         var u = Meteor.user().username;
-        alert(u);
     },
 
     'click #createStory' : function() {
@@ -64,13 +63,13 @@ Template.story.events ({
                 editor: Meteor.user().username,
                 votes: 1,
                 photos: photos,
-                storyName: this.storyName + 'dod'
+                storyName: this.storyName
                 },
                 function(err, result) {
                     if(err) {
                         alert(err);
                     } else {
-                        alert(result);
+                        return;
                     }
                 }
             );

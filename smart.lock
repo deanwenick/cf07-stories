@@ -4,7 +4,7 @@
     "basePackages": {
       "iron-router": {},
       "bootstrap-3": {},
-      "jqueryui": {}
+      "jquery-ui-sortable": {}
     },
     "packages": {
       "iron-router": {
@@ -17,15 +17,10 @@
         "tag": "v0.3.7",
         "commit": "5dd0d142c870647b910be80bc777b96f0dd45e5e"
       },
-      "jqueryui": {
-        "git": "https://github.com/mizzao/meteor-jqueryui.git",
-        "tag": "v1.10.3r2",
-        "commit": "d54f75cfad37ff8ce6ef9ad49de55738ba921af7"
-      },
-      "build-fetcher": {
-        "git": "https://github.com/mizzao/meteor-build-fetcher.git",
-        "tag": "v0.1.0",
-        "commit": "e3813b1fc7f5c576e8e1fa4c51ae6f4687780a35"
+      "jquery-ui-sortable": {
+        "git": "https://github.com/rgm/meteor-jquery-ui-sortable.git",
+        "tag": "v1.10.3",
+        "commit": "4423bd4b28cd81df91400a6bcb2a3d82e72894dc"
       }
     }
   }

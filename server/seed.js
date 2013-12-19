@@ -11,7 +11,7 @@ if (Stories.find().count() === 0) {
         editor: "Dean",
         votes: 0,
         photos: ["/pics/wenick_20131110_171.jpg", "/pics/wenick_20131110_182.jpg", "/pics/wenick_20131110_186.jpg", "/pics/wenick_20131110_190.jpg", "/pics/wenick_20131110_205.jpg"],
-        storyName: "D2BS est 2013"
+        storyName: "D2BS West 2013"
     });
 
     Stories.insert({
