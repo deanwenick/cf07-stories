@@ -1,3 +1,5 @@
+
+/*
 smartFile.upload(file, {
     fileName: "myupload.jpg", //optional, overrides file.name
     path: "uploads" //optional, path of storage of the upload relative to basePath
@@ -9,4 +11,4 @@ smartFile.upload(file, {
 
     // Log the public URL of the upload
     console.log("Upload public URL:" + smartFile.resolvePublic(res));
-});
+});*/

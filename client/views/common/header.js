@@ -10,8 +10,8 @@ code for the header template
     }
 });*/
 
-Template.story.rendered = function () {
-
+Template.header.rendered = function () {
+    console.log(1);
     $("#instructions").tooltip({
          show: {
             effect: "slideDown",

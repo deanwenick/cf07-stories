@@ -79,7 +79,7 @@ Router.map(function() {
         }
     });
 
-    this.route('create', {
+    this.route('createStory', {
         path: '/create'
     });
 });
