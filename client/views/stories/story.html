@@ -11,9 +11,10 @@
                     <li class="col-lg-2 col-md-2 col-sm-2 col-xs-12"><img src="{{.}}" class="thumbnail img-responsive"></li>
                 {{/each}}
             </ul>
-            <button class='btn btn-default' type='button' id='seeShow' data-id="{{_id}}">See Slide Show</button>
-            <button class='btn {{#unless isUser}}disabled{{/unless}} btn-default' type='button' id='vote'>Vote</button>
-            <button class='btn btn-default disabled' type='button' id='createStory'>Create Story</button>
+            <button title="see the show" class='btn btn-default' type='button' id='seeShow' data-id="{{_id}}">See Slide Show</button>
+            <!-- using html5 data element - just for funs, better ways to do this -->
+            <button data-user="Log in or create an account in order to vote" class='btn btn-default' type='button' id='vote'>Vote</button>
+            <button title="create story" class='btn btn-default disabled' type='button' id='createStory'>Create Story</button>
             <p>Votes: <span>{{votes}}</span></p>
         </div>
 

@@ -3,6 +3,7 @@ code for the story template
 */
 
 Template.story.rendered = function () {
+
     $('#storyView').sortable();
 
     if(Meteor.user()){
@@ -10,6 +11,7 @@ Template.story.rendered = function () {
             $('#createStory').removeClass('disabled');
         } );
     }
+
 };
 
 Template.story.events ({
@@ -46,8 +48,16 @@ Template.story.events ({
     },
 
     'click #vote' : function(evt, templ) {
+        if(Meteor.user()){
         Stories.update(this._id, {$inc: {votes: 1}});
-        var u = Meteor.user().username;
+        } else {
+            var tip = $('#vote').attr('data-user');
+            tip = "<div title='Log in please'><p>" + tip + "</p></div>";
+            $(tip).dialog({
+                height: 140,
+                modal: true
+                });
+        }
     },
 
     'click #createStory' : function() {

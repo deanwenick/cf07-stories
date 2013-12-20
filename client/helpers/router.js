@@ -48,4 +48,8 @@ Router.map(function() {
             };
         }
     });
+
+    this.route('create', {
+        path: '/create'
+    });
 });
