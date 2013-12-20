@@ -4,7 +4,8 @@
     "basePackages": {
       "iron-router": {},
       "bootstrap-3": {},
-      "jqueryui": {}
+      "jqueryui": {},
+      "smartfile": {}
     },
     "packages": {
       "iron-router": {
@@ -21,6 +22,11 @@
         "git": "https://github.com/mizzao/meteor-jqueryui.git",
         "tag": "v1.10.3r2",
         "commit": "d54f75cfad37ff8ce6ef9ad49de55738ba921af7"
+      },
+      "smartfile": {
+        "git": "https://github.com/sylvaingi/meteor-smartfile.git",
+        "tag": "v0.1.1",
+        "commit": "df8d5105b86e21fcbf73e787dd6e8f3b41a76a79"
       },
       "build-fetcher": {
         "git": "https://github.com/mizzao/meteor-build-fetcher.git",

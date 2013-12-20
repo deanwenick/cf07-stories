@@ -71,7 +71,7 @@ Template.story.events ({
                 {
                 photographer: this.photographer,
                 editor: Meteor.user().username,
-                votes: 1,
+                votes: 0,
                 photos: photos,
                 storyName: this.storyName
                 },
@@ -79,11 +79,11 @@ Template.story.events ({
                     if(err) {
                         alert(err);
                     } else {
-                        return;
+                        alert(result);
+                        Router.go('/stories/'+result);
                     }
                 }
             );
-
     }
 });// /events
 
