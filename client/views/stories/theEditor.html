@@ -1,19 +1,25 @@
-<template name="stories">
+<!-- template for editor list page -->
+
+<template name="theEditor">
 <div class="container">
-    <h2>These are the current stories</h2>
-    {{#each stories}}
+    <h2>These are stories edited by {{editor}}</h2>
+
+    <p><a href="/stories">&larr; Back to all stories</a></p>
+
+    {{#each theEditor}}
     <div class="col-sm-6 col-md-4">
+
         <div class="thumbnail">
 
             <img src="{{photos.[0]}}" alt="great image from a story">
-            
+
             <div class="caption">
 
                 <h3>{{storyName}}</h3>
 
                 <p>Photographer: <a href="/photog/{{photographer}}">{{photographer}}</a></p>
 
-                <p>Editor: <a href="/editor/{{editor}}">{{editor}}</a></p>
+                <p>Editor: {{editor}}</p>
 
                 <p><a href="/stories/{{_id}}" class="btn btn-primary" role="button">See the story</a> <span class="text-right">Votes: {{votes}}</span></p>
 

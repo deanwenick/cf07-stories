@@ -9,3 +9,13 @@ code for the header template
         alert(email);
     }
 });*/
+
+Template.story.rendered = function () {
+
+    $("#instructions").tooltip({
+         show: {
+            effect: "slideDown",
+            delay: 250
+        }
+    });
+};

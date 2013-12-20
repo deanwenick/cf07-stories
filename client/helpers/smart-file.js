@@ -1,6 +1,6 @@
 smartFile.upload(file, {
     fileName: "myupload.jpg", //optional, overrides file.name
-    path: "stories" //optional, path of storage of the upload relative to basePath
+    path: "uploads" //optional, path of storage of the upload relative to basePath
 }, function (err, res){
     if (err) {
         console.log("upload failed", err);

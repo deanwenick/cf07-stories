@@ -49,6 +49,36 @@ Router.map(function() {
         }
     });
 
+    this.route('photog', {
+
+        path: '/photog/:photographer',
+
+        waitOn: function() {
+            return Meteor.subscribe('photog', this.params.photographer);
+        },
+
+        data: function() {
+            return {
+                photog: Stories.find({photographer: this.params.photographer})
+            };
+        }
+    });
+
+    this.route('theEditor', {
+
+        path: '/editor/:editor',
+
+        waitOn: function() {
+            return Meteor.subscribe('theEditor', this.params.editor);
+        },
+
+        data: function() {
+            return {
+                theEditor: Stories.find({editor: this.params.editor})
+            };
+        }
+    });
+
     this.route('create', {
         path: '/create'
     });
