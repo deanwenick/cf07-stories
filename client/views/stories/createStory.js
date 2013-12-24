@@ -1,15 +1,15 @@
-/*
+
 Template.createStory.events({
 
-'click #createNew': function() {
+'click #createNewStory': function() {
 
     Stories.insert(
                 {
                 photographer: Meteor.user().username,
                 editor: Meteor.user().username,
                 votes: 0,
-                photos: photos,
-                storyName: name
+                photos: "",
+                storyName: ""
                 },
                 function(err, result) {
                     if(err) {
@@ -20,4 +20,4 @@ Template.createStory.events({
                 }
             );
 }
-});*/
+});

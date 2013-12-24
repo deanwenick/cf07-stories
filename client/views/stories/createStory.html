@@ -3,22 +3,22 @@
     <a href="/stories">&larr; Back to all stories</a>
 
     <div class="jumbotron">
+  
+        <form enctype="multipart/form-data" name="newStoryForm" id="newStoryForm">
+            <legend>Make a new story</legend>
+            <dl>
+                <dt>Photographer: </dt>
+                    <dd><label><input id="photographer" name="photographer" type="text"></label></dd>
 
-    
-        <form>
-        <legend>Make a new story</legend>
+                <dt>Editor: </dt>
+                    <dd><label><input id="editor" name="editor" type="text"></label></dd>
 
-        <dl>
-            <dt>Photographer: </dt>
-                <dd><label><input id="photographer" name="photographer" type="text"></label></dd>
-
-            <dt>Editor: </dt>
-                <dd><label><input id="editor" name="editor" type="text"></label></dd>
-
-            <dt>Story Name: </dt>
-                <dd><label><input id="storyName" name="storyName" type="text"></label></dd>
-        </dl>
-    </form>
+                <dt>Story Name: </dt>
+                    <dd><label><input id="storyName" name="storyName" type="text"></label></dd>
+            </dl>
+            <input class="btn" type="file" name="fileUpload" id="fileUpload" multiple="multiple"> 
+            <input type="button" name="createNewStory" id="createNewStory" value="submit">
+        </form>
     </div>
 </div>
 </template>
