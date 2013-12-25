@@ -59,7 +59,7 @@ Router.map(function() {
 
         data: function() {
             return {
-                photog: Stories.find({photographer: this.params.photographer})
+                photog: Stories.find( {photographer: this.params.photographer} )
             };
         }
     });
