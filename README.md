@@ -8,4 +8,12 @@ This was started as a project for the Code Fellows JavaScript bootcamp, Fall 201
 Meteor was chosen as the framework to test the concept of a full-stack JavaScript application.
 
 - 12/18 working on overall functionality
-- 12/24 different behavior localhost and deploy at photo-story.meteor.com, fom not submitting on meteor.com
+- 12/24 different behavior localhost and deploy at photo-story.meteor.com, form not submitting on meteor.com
+- 12/26 all behaviors functioning as expected, submit form disabled
+
+
+`npm install meteor` or visit meteor.com first
+
+`npm install meteorite` the package manager
+
+`mrt` will do the necessary install and start it up on port 4000
