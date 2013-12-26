@@ -12,8 +12,14 @@ Meteor was chosen as the framework to test the concept of a full-stack JavaScrip
 - 12/26 all behaviors functioning as expected, submit form disabled
 
 
-`npm install meteor` or visit meteor.com first
+`$ curl https://install.meteor.com | /bin/sh` to install meteor (docs.meteor.com)
 
-`npm install meteorite` the package manager
+`npm install -g meteorite` the package manager globally, alternatively use `$ sudo -H npm install -g meteorite` if your system requires root access for global install
 
-`mrt` will do the necessary install and start it up on port 4000
+`git clone https://github.com/deanwenick/stories.git` 
+
+`cd stories`
+
+`mrt install` will run meteorite do the necessary dependencies
+
+`meteor` will start everything up now and in the future
