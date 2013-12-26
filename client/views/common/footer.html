@@ -1,5 +1,6 @@
 <template name="footer">
     <footer class="container">
-        <p><a href="create">Make your own story</a></p>
+        <!-- important to use helper here, hard path messes things up -->
+        <p><a href="{{pathFor 'createStory'}}">Make your own story</a></p>
     </footer>
 </template>

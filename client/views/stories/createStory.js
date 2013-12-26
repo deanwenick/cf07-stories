@@ -3,13 +3,15 @@ Template.createStory.events({
 
     'click #createNewStory': function() {
         //submit placeholder data
+        var storyName = $('#storyName').html();
+        alert(storyName);
         Stories.insert(
             {
             photographer: Meteor.user().username,
             editor: Meteor.user().username,
             votes: 0,
             photos: "",
-            storyName: ""
+            storyName: 'storyName'
             },
             //this works from some routes and not others
             //router works from '/', '/stories/', not from /stories/:anything"
