@@ -59,7 +59,8 @@ Router.map(function() {
 
         data: function() {
             return {
-                photog: Stories.find( {photographer: this.params.photographer} )
+                photog: Stories.find( {photographer: this.params.photographer} ),
+                photographer: this.params.photographer
             };
         }
     });
@@ -74,7 +75,8 @@ Router.map(function() {
 
         data: function() {
             return {
-                theEditor: Stories.find({editor: this.params.editor})
+                theEditor: Stories.find({editor: this.params.editor}),
+                thisEditor: this.params.editor
             };
         }
     });
