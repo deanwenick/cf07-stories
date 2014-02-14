@@ -10,3 +10,7 @@ header p {
 .page-header {
     margin-top: 5px
 }
+
+ul#storyView li {
+    -webkit-user-drag: element;
+}

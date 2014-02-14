@@ -72,6 +72,7 @@ Template.story.events ({
                 photographer: this.photographer,
                 editor: Meteor.user().username,
                 votes: 0,
+                voters: [Meteor.userId()],
                 photos: photos,
                 storyName: this.storyName
                 },
