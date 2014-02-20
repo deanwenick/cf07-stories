@@ -48,12 +48,17 @@ Template.story.events ({
     },
 
     'click #vote' : function(evt, templ) {
-        if(Meteor.user()){
-        Stories.update(this._id, {$inc: {votes: 1}});
+        if(Meteor.user()) {
+
+            //increment vote and add user to array of voters
+            Stories.update(this._id, {
+                $inc: {votes: 1},
+                $addToSet: {voters: Meteor.userId()}
+            });
         } else {
-            var tip = $('#vote').attr('data-user');
-            tip = "<div title='Log in please'><p>" + tip + "</p></div>";
-            $(tip).dialog({
+            var userTip = $('#vote').attr('data-user');
+            userTip = "<div title='Log in please'><p>" + userTip + "</p></div>";
+            $(userTip).dialog({
                 height: 140,
                 modal: true
                 });
@@ -67,6 +72,7 @@ Template.story.events ({
             return $(pic).attr('src');
         });
 
+        //create new story
         Stories.insert(
                 {
                 photographer: this.photographer,
